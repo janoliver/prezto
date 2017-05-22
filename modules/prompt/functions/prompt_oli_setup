@@ -120,7 +120,7 @@ function prompt_oli_setup {
     'status' '$(coalesce "%b" "%p" "%c")%s%A%B%S%a%d%m%r%U%u'
 
   # Define prompts.
-  PROMPT=' ${SSH_TTY:+"%F{9}%n%f%F{7}@%f%F{3}%m%f "}%B%F{3}${_prompt_oli_pwd}%b%(!. %B%F{1}#%f%b.) '
+  PROMPT=' ${SSH_TTY:+"%F{9}%n%f%F{7}@%f%F{3}%m%f "}%B%F{3}${_prompt_oli_pwd}%f%b%(!. %B%F{1}#%f%b.) '
   RPROMPT=''
   SPROMPT='zsh: correct %F{1}%R%f to %F{2}%r%f [nyae]? '
 }
@@ -131,7 +131,7 @@ function prompt_oli_preview {
   local +h SPROMPT=''
 
   editor-info 2>/dev/null
-  prompt_preview_theme 'sorin'
+  prompt_preview_theme 'oli'
 }
 
 prompt_oli_setup "$@"
